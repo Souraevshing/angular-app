@@ -1,0 +1,18 @@
+<div class="content-box">
+  <h2>Create</h2>
+  <form (ngSubmit)="onButtonClicked()">
+    <div>
+      <label for="name"> Name : </label>
+      <input type="text" name="name" id="name" [(ngModel)]="name" placeholder="Name" />
+    </div>
+    <div>
+      <label for="description"> Description : </label>
+      <input type="text" name="description" id="description" [(ngModel)]="description" placeholder="Description" />
+    </div>
+    <div>
+      <label for="price"> Price : </label>
+      <input type="number" name="price" id="price" [(ngModel)]="price" placeholder="Price" />
+    </div>
+    <button type="submit">{{ buttonText }}</button>
+  </form>
+</div>

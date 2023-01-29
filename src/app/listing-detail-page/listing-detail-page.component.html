@@ -1,0 +1,15 @@
+<div class="content-box" *ngIf="!isLoading">
+  <p>Views : {{listing.views}}</p>
+  <a routerLink="/listings">
+    <button>Back</button>
+  </a>
+  <h2>{{ listing.name }}</h2>
+  <p>{{ listing.description }}</p>
+  <p>Rs {{ listing.price }}</p>
+  <a routerLink="/contact/{{ listing.id }}">
+    <button>Contact Seller</button>
+  </a>
+</div>
+<div class="content-box" *ngIf="isLoading">
+  <h2>LOADING...</h2>
+</div>

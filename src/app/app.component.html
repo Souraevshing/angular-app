@@ -1,0 +1,16 @@
+<!-- router-outlet always points to current page. So, when page requests to any url, then the contents inside this page comes as output. -->
+<div id="page-wrap">
+    <div id="max-width-column" *ngIf="auth.user|async">
+        <app-navbar></app-navbar>
+        <div id="content-wrap">
+            <router-outlet></router-outlet>
+        </div>
+        <button (click)="signOutUser()">Sign Out</button>
+    </div>
+    <div id="max-width-column" *ngIf="!(auth.user|async)">
+        <h1>Sign In or Register</h1>
+        <button (click)="signInUser()">
+            Sign In With Google
+        </button>
+    </div>
+</div>
